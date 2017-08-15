@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 # Author: franckysolo
-import time, threading
 import serial
 from tkinter import *
 
