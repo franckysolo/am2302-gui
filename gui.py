@@ -36,7 +36,7 @@ def update_labels():
     data = sensor.readline().decode().strip().split(':')
     labelHumidity.config(text=data[0] + '%')
     labelTmp.config(text=data[1] + '°C')
-    root.after(1000, update_label)
+    root.after(1000, update_labels)
 
 # run the script
 labelHumidity = build_label("Humidité", 0, 0)
