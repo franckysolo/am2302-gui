@@ -32,7 +32,7 @@ def build_label(title, row, col):
 """
 Callback: met à jour les valeurs du capteur dans la fenêtre
 """
-def update_label():
+def update_labels():
     data = sensor.readline().decode().strip().split(':')
     labelHumidity.config(text=data[0] + '%')
     labelTmp.config(text=data[1] + '°C')
@@ -42,6 +42,6 @@ def update_label():
 labelHumidity = build_label("Humidité", 0, 0)
 labelTmp = build_label("Température", 0, 1)
 
-update_label()
+update_labels()
 
 root.mainloop()
