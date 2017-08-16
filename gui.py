@@ -38,10 +38,17 @@ def update_labels():
     labelTmp.config(text=data[1] + '°C')
     root.after(1000, update_labels)
 
+def quit(event):
+    print("bye, bye...")
+    root.quit()
+
 # run the script
 labelHumidity = build_label("Humidité", 0, 0)
 labelTmp = build_label("Température", 0, 1)
 
-update_labels()
-
-root.mainloop()
+try:
+    update_labels()
+    root.bind('<Control-c>', quit)
+    root.mainloop()
+except KeyboardInterrupt as e:
+    print("\nBye, bye!!")
