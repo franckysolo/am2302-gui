@@ -4,4 +4,4 @@ A simple interface for read AM2302 sensor data
 
 
 ### Circuit
-![Schéma du circuit](./am3202_bb.png)
+![Schéma du circuit](./am2302_bb.png)
